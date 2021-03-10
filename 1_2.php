@@ -1,7 +1,12 @@
 <?php
-
+//создние массива, который будет использоваться в качестве стека
 $stack = array();
+//состояние автомата
 $state = 0;
+/**
+ * Функция реализации работы МП-автомата для очередного символа слова
+ * @param $literal - очередная буква слова
+ */
 function getNewState($literal)
 {
     global $stack;
@@ -52,14 +57,15 @@ for ($i = 0; $i < $n; $i++) {
     array_push($in_string, 1);
 }
 
+for ($i = 0; $i <= 2 * $n; $i++) {
+    getNewState($in_string[$i]);
+}
+//вывод результата
 print_r("Входное слово: ");
 foreach ($in_string as $value) {
     echo $value;
 }
 print_r("<br/>");
-for ($i = 0; $i <= 2 * $n; $i++) {
-    getNewState($in_string[$i]);
-}
 print_r("Состояние: " . $state);
 print_r("<br/>");
 print_r("Стэк: ");

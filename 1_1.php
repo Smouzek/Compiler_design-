@@ -6,10 +6,10 @@
 Class DefineState
 {
     /**
-     * Метод для определения состояния конечного автомата
-     * @param $state - текущее состояние
-     * @param $literal - символ входного слова
-     * @return int - новое состояние
+     * Р¤СѓРЅРєС†РёСЏ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РѕС‡РµСЂРµРґРЅРѕРіРѕ СЃРѕСЃС‚РѕСЏРЅРёСЏ
+     * @param $state - С‚РµРєСѓС‰РµРµ СЃРѕСЃС‚РѕСЏРЅРёРµ
+     * @param $literal - С‚РµРєСѓС‰РёР№ СЃРёРјРІРѕР» СЃР»РѕРІР°
+     * @return int - РЅРѕРІРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ
      */
     public function newState($state, $literal)
     {
@@ -92,13 +92,17 @@ Class DefineState
         return $result;
     }
 }
-//входная строка
+//РІС…РѕРґРЅРѕРµ СЃР»РѕРІРѕ
 $in_string = "ABABAC";
-//начальное состояние
+//РЅР°С‡Р°Р»СЊРЅРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ
 $current_state = 0;
 $defineState = new DefineState();
 for ($i = 0; $i < strlen($in_string); $i++) {
     $current_state = $defineState->newState($current_state, $in_string[$i]);
 }
-//вывод конечного состояния
+//РІС‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+print_r("Р’С…РѕРґРЅР°СЏ СЃС‚СЂРѕРєР°: ");
+print_r($in_string);
+print_r("<br/>");
+print_r("РљРѕРЅРµС‡РЅРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ: ");
 print_r($current_state);
