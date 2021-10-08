@@ -1,0 +1,6 @@
+<patient>
+	<id>1</id>
+	<fio>Иванов Иван Иванович</fio>
+	<birth_date>2020-01-01</birth_date>
+	<OIS_num>123456789101</OIS_num>
+</patient>

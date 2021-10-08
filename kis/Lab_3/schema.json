@@ -1,0 +1,8 @@
+{
+	"patient_id": "number",
+	"test_date": "string",
+	"test_type": "string",
+	"test_accuracy": "string",
+	"test_accuracy_q": "string",
+	"test_lab": "string"
+}

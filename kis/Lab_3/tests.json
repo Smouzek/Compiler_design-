@@ -1,0 +1,7 @@
+{
+	"patient_id": 1,
+	"test_type": "lgG",
+	"test_accuracy": "88%",
+	"test_accuracy_q": "high",
+	"test_lab": "ANIVAC"
+}
